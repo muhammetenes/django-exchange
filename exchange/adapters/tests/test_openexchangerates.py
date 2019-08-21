@@ -35,7 +35,7 @@ class OpenExchangeRatesAdapterTest(TestCase):
             for k, v in currency_dict.items():
                 try:
                     Currency.objects.get(code=k)
-                except Currency.DoesNotExist, detail:
+                except Currency.DoesNotExist as detail:
                     self.fail(detail)
             for k, v in latest_dict['rates'].items():
                 try:
@@ -43,5 +43,5 @@ class OpenExchangeRatesAdapterTest(TestCase):
                         source__code='USD',
                         target__code=k,
                         rate=str(v))
-                except ExchangeRate.DoesNotExist, detail:
+                except ExchangeRate.DoesNotExist as detail:
                     self.fail(detail)

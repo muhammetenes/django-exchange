@@ -21,7 +21,7 @@ def import_class(class_path):
         module_name = '.'.join(class_path.split(".")[:-1])
         mod = import_module(module_name)
         return getattr(mod, class_path.split(".")[-1])
-    except Exception, detail:
+    except Exception as detail:
         raise ImportError(detail)
 
 

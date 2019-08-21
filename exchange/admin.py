@@ -1,5 +1,10 @@
 from django.contrib import admin
-from models import Currency, ExchangeRate
+
+try:
+    from models import Currency, ExchangeRate
+except ImportError:
+    # For Python 3.0 and later
+    from exchange.models import Currency, ExchangeRate
 
 
 class CurrencyAdmin(admin.ModelAdmin):
