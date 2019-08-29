@@ -14,7 +14,7 @@ setup(
     packages=find_packages(
         exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     install_requires=[
-        '-e git+https://github.com/muhammetenes/openexchangerates.git'
+        '-e git+https://github.com/muhammetenes/openexchangerates.git#egg=openexchangerates'
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
