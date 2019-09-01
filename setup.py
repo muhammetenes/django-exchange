@@ -13,7 +13,6 @@ setup(
     author_email='kadir.pekel@metglobal.com',
     packages=find_packages(
         exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
-    dependency_links=['https://github.com/muhammetenes/openexchangerates.git#egg=openexchangerates'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
